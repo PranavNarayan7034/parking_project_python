@@ -28,6 +28,23 @@ while True:
     elif ur == '2':
         vn = input('Enter your vehicle no:')
         fn = int(input('Enter the floor no of your vehicle:'))
+        if fn==1:
+            for i,j in enumerate(first_floor):
+                if j['Vehicle_no'] == vn:
+                    first_floor.pop(i)
+        elif fn==2:
+            for i,j in enumerate(second_floor):
+                if j['Vehicle_no'] == vn:
+                    first_floor.pop(i)
+        elif fn==3:
+            for i,j in enumerate(third_floor):
+                if j['Vehicle_no'] == vn:
+                    first_floor.pop(i)
+        else:
+            print('invalid floor no')
+
+
+
         print('You can exit from your parking slot, Thank you for using ABC parking')
     else:
         print('Invalid input')
